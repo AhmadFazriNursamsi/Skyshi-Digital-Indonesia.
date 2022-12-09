@@ -1,0 +1,107 @@
+//Create Data Dev
+
+
+///User Login
+PATCH  http://localhost:8000/users/48
+Content-Type: application/json
+
+{
+    "email_address": "user3@gmail.com",
+    "user_name": "Ahmad Fazri",
+    "password": "111111",
+    "confPassword": "111111",
+    "status": "Active ",
+    "phone_number": "0895432632784632 ",
+    "statusProfile": "Aktif,",
+    "role": "User",
+    "phone_activated": "Active",
+    "date_activated": "Active",
+    "otp_expired": "Active",
+    "payment_activated": "Active",
+    "user_type": 1,
+
+    ///userProfile
+    "address":"Bekasi",
+    "fullname":"Ahmad Fazri Nursamsi",
+    "no_member": "No-1",
+    "gender":"Laki-Laki",
+    "short_bio": "No-1",
+    "profile_pic": "No-1",
+    "regional":"Islam",
+    "city_regional": "Bekasi",
+
+    "device":"0", 
+    "menu":"kk",
+
+    "geo_position":"0",
+    "sos_type":"sos_type",
+    "message":"message",
+    "sender":"sender",
+    "address_sos": "address_sos",
+    "phone_number_sos":"phone_number_sos"
+}
+###
+POST  http://localhost:8000/inbox
+
+Content-Type: application/json
+
+{
+    "subject":"subject",
+    "body":"body",
+    "type":"type",
+    "field1":"field1",
+    "field2":"field2",
+    "field3":"field3",
+    "field4":"field4",
+    "field5":"field5",
+    "field6":"field6",
+    "field7":"field7",
+    "read":"read",
+}
+###
+POST  http://localhost:8000/resentotp
+Content-Type: application/json
+
+{
+    "email_address": "user2@gmail.com",
+    "user_type": 0
+}
+
+###
+POST   http://localhost:8000/login
+Content-Type: application/json
+
+{
+    "email_address": "user2@gmail.com",
+    "password": "12345",
+    "user_type": 1
+}
+
+###
+POST  http://localhost:8000/resetPassword
+Content-Type: application/json
+
+{
+    "email_address": "user9@gmail.com",
+    "user_name": "asdasdasd",
+    "password": "111111",
+    "user_type": 1
+}
+###
+GET http://localhost:8000/articies
+Content-Type: application/json
+
+{
+
+}
+###
+
+PATCH  http://localhost:8000/daily/1
+
+Content-Type: application/json
+
+{
+    "menu": "content", 
+    "device": "highlight", 
+    
+}
